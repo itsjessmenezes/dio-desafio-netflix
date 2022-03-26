@@ -1,0 +1,143 @@
+:root {
+  --red: #e50914;
+  --black: #141414;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--black);
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+header .container {
+  background-color: #000;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  padding: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 15%;
+  cursor: pointer;
+}
+
+header .container nav a {
+  text-decoration: none;
+  color: #aaa;
+}
+header .container nav a + a {
+  margin-left: 10px;
+}
+
+header .container nav a:hover {
+  color: #fff;
+}
+
+.cover {
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 100%),
+    url('https://www.themoviedb.org/t/p/original/xGexTKCJDkl12dTW4YCBDXWb1AD.jpg');
+  width: 100%;
+  height: 500px;
+}
+
+.featured-movie {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.featured-movie h3 {
+  margin-bottom: 10px;
+  font-size: 56px;
+}
+
+.featured-movie .description {
+  width: 50%;
+  margin-bottom: 30px;
+  line-height: 20px;
+}
+
+.button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  margin-right: 15px;
+  padding: 15px;
+
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.button i {
+  margin-right: 8px;
+}
+
+.my-list {
+  width: 100%;
+  height: 100px;
+  background-color: #000;
+  filter: blur(20px);
+  color: #fff;
+  margin-top: -25px;
+}
+
+.movies-carousel h3 {
+  position: absolute;
+  margin-top: -50px;
+  margin-left: 50px;
+
+  color: #fff;
+  font-size: 24px;
+}
+
+.my-list-carousel,
+.top-ten,
+.keep-watching {
+  height: 300px;
+  margin-bottom: 100px;
+  padding: 0 50px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.item {
+  transition: transform 450ms;
+  background-size: cover;
+  display: inline-block;
+  width: 200px;
+  height: 300px;
+}
+
+.item + .item {
+  margin-left: 10px;
+}
+
+.item:hover {
+  transform: scale(1.08);
+}
+
+.my-list-carousel::-webkit-scrollbar,
+.top-ten::-webkit-scrollbar,
+.keep-watching::-webkit-scrollbar {
+  display: none;
+}
